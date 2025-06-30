@@ -105,7 +105,7 @@ const OrderBike = () => {
     </Text>
     <View style={styles.hr} />
     <View style={styles.actions}>
-      <Pressable style={styles.confirm} onPress={() => setModalStep(null)}>
+      <Pressable style={styles.confirm} onPress={() => navigation.navigate('StartRide')}>
         <Text style={{ color: '#fff' }}>Start riding</Text>
       </Pressable>
     </View>
@@ -140,10 +140,10 @@ const OrderBike = () => {
 
         <View style={styles.footer}>
           <View style={styles.handleBar} />
-          <View style={styles.searchContainer}>
+          {/* <View style={styles.searchContainer}>
             <Image source={require('../assets/Search.png')} style={styles.searchIcon} />
             <TextInput placeholder="Enter your location" style={styles.searchInput} />
-          </View>
+          </View> */}
 
           <View style={styles.card}>
             <Image source={require('../assets/map-bike.png')} style={styles.bikeImage} />
@@ -264,7 +264,7 @@ const styles = StyleSheet.create({
   buttonRow: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    marginTop: 16,
+    marginTop: 76,
   },
   reserveButton: {
     flex: 1,

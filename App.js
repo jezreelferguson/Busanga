@@ -11,12 +11,18 @@ import Profile from "./screens/register/Profile";
 import OrderBike from "./screens/OrderBike";
 import QRScanner from "./screens/QRScanner";
 import Payment from "./screens/Payment";
+import GetRide from "./screens/GetRide";
+import StartRide from "./screens/StartRide";
+import RideHistory from "./screens/RideHistory";
 export default function App() {
   const Stack = createNativeStackNavigator();
 
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Welcome" screenOptions={{ headerShown: false }}>
+      <Stack.Navigator
+        initialRouteName="Welcome"
+        screenOptions={{ headerShown: false }}
+      >
         <Stack.Screen name="Welcome" component={Welcome} />
         <Stack.Screen name="GetStarted" component={GetStarted} />
         <Stack.Screen name="Register" component={Register} />
@@ -30,11 +36,11 @@ export default function App() {
         <Stack.Screen name="SignUp" component={SignUp} />
         <Stack.Screen name="Profile" component={Profile} />
         <Stack.Screen name="OrderBike" component={OrderBike} />
-       <Stack.Screen name="QRScanner" component={QRScanner} />
-       <Stack.Screen name="Payment" component={Payment} />
-
-
-
+        <Stack.Screen name="QRScanner" component={QRScanner} />
+        <Stack.Screen name="Payment" component={Payment} />
+        <Stack.Screen name="GetRide" component={GetRide} />
+        <Stack.Screen name="StartRide" component={StartRide} />
+        <Stack.Screen name="RideHistory" component={RideHistory} />
       </Stack.Navigator>
     </NavigationContainer>
   );

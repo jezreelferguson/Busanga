@@ -40,7 +40,7 @@ const Dashboard = () => {
         <Text style={styles.sidebarTitle}>Busanga</Text>
         {[
           { icon: 'person-circle-outline', label: 'Profile', route: 'Profile' },
-          { icon: 'bicycle-outline', label: 'Ride History' },
+          { icon: 'bicycle-outline', label: 'Ride History', route: 'RideHistory'},
           { icon: 'card-outline', label: 'Payment Methods' },
           { icon: 'repeat-outline', label: 'Subscriptions' },
           { icon: 'gift-outline', label: 'Invite and earn' },
@@ -55,9 +55,11 @@ const Dashboard = () => {
             <Text style={styles.sidebarText}>{item.label}</Text>
           </Pressable>
         ))}
+        <View style={styles.close}>
         <Pressable onPress={toggleSidebar}>
           <Text style={styles.closeText}>X</Text>
         </Pressable>
+        </View>
       </Animated.View>
       
 
@@ -213,12 +215,17 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     backgroundColor:'#000',
     borderRadius:100/2,
-    width:30
+    width:50
   },
 
 cardIcon: {
   marginBottom: 8,
 },
+
+close:{
+  justifyContent:'center',
+  alignSelf:'center',
+}
 });
 
 export default Dashboard;

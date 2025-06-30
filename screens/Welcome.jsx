@@ -16,7 +16,7 @@ export default function Welcome() {
   useEffect(() => {
     const timer = setTimeout(() => {
       navigation.navigate('GetStarted');
-    }, 3000);
+    }, 8000);
 
     return () => clearTimeout(timer);
   }, []);
