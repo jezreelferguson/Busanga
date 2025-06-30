@@ -15,12 +15,20 @@
     "ios": {
       "supportsTablet": true
     },
+    "updates": {
+      "url": "https://u.expo.dev/84b88392-7954-4fd8-b4a6-0b41758f217b"
+    },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "edgeToEdgeEnabled": true
+      "edgeToEdgeEnabled": true,
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.CAMERA"
+      ],
+      "package": "com.ferg2005.Busanga"
     },
     "web": {
       "favicon": "./assets/favicon.png"
@@ -28,6 +36,15 @@
     "plugins": [
       "expo-router",
       "expo-barcode-scanner"
-    ]
+    ],
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "84b88392-7954-4fd8-b4a6-0b41758f217b"
+      }
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    }
   }
 }
